@@ -25,11 +25,11 @@ public class Review {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "house_id")
+    @JoinColumn(name = "house_id", referencedColumnName = "id")
     private House house;
 
     @Column(name = "rating")
